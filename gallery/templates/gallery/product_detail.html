@@ -1,0 +1,14 @@
+{% extends "gallery/main.html" %}
+
+{% block content %}
+<div class="product-item"> 
+    <a href="#"> 
+        <img src="{{ product.image.url }}" alt="{{ product.name }}"> 
+    </a> 
+    <h2>{{ product.name }}</h2> 
+    <p>{{ product.description }}</p> 
+</div> 
+
+<a href="{% url 'product-update' product.id %}">update</a>
+<a href="{% url 'product-delete' product.id %}">delete </a>
+{% endblock content %}

@@ -1,0 +1,56 @@
+ /* Add CSS styles for flex container and items */
+ body {
+    color: white;
+    background-color: rgba(1,14,41, 0.9);
+    margin: 1.5rem;
+ }
+ 
+ .product-list { 
+    display: flex; 
+    flex-wrap: wrap; /* Allow items to wrap to the next row if necessary */
+    justify-content: space-between; /* Space items evenly along the main axis */
+    list-style: none; /* Remove list styles */
+    padding: 0; 
+
+    @media(max-width: 1000px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+
+    }
+} 
+
+.product-item { 
+    flex: 1; /* Grow to fill available space evenly */
+    max-width: 30%; /* Limit item width to avoid overcrowding */
+    margin: 10px; /* Add spacing between items */
+    border: 1px solid #ccc; /* Add a border for visual separation */ 
+    padding: 10px; 
+    text-align: center; 
+    background-color: rgba(1,14,41, 0.7);
+
+    @media(max-width: 1000px) {
+        max-width: 100%;
+    }
+} 
+
+.product-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul{
+    list-style: none;
+    display:flex;
+    gap: 1.5rem;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}

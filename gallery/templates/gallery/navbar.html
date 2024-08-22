@@ -1,0 +1,10 @@
+<nav class="navbar">
+    <h1>Product Catalog</h1> 
+    <form action="" method="get">
+        <input type="text" placeholder="search product ..." name="q">
+    </form>
+    <ul>
+        <li><a href="{% url 'product-list' %}">home</a></li>
+        <li><a href="{% url 'product-create' %}">add</a></li>
+    </ul>
+</nav>

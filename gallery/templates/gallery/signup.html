@@ -1,0 +1,23 @@
+{% extends "gallery/main.html" %}
+
+{% block content %}
+<h1>Signup Page</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <div>
+        <label for="username">Username</label>
+        {{form.username}}
+    </div>
+    <div>
+        <label for="password1">password</label>
+        {{form.password1}}
+    </div>
+    <div>
+        <label for="password2">password2</label>
+        {{form.password2}}
+    </div>
+    <button type="submit">signup</button>
+</form>
+
+<p>Don't have account <a href="{% url 'login' %}">login here</a></p>
+{% endblock content %}

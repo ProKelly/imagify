@@ -1,0 +1,15 @@
+{% extends "gallery/main.html" %}
+
+{% block content %}
+    <ul class="product-list"> 
+        {% for product in products %} 
+            <li class="product-item"> 
+                <a href="{% url 'product-detail' product.id %}"> 
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}"> 
+                </a> 
+                <h2>{{ product.name }}</h2> 
+                <p>{{ product.description }}</p> 
+            </li> 
+        {% endfor %} 
+    </ul> 
+{% endblock content %}
